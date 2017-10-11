@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs');
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
@@ -15,11 +16,17 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-
 //AIML interpreter
 aimlHigh = require('aiml-high');
-var interpreter = new aimlHigh({name:'Bot', age:'42'}, 'Goodbye');
-interpreter.loadFiles(['./aiml/bot.aiml']);
+var interpreter = new aimlHigh({name:'Isma', age:'18'}, 'Goodbye');
+
+fs.readdir('./aiml', (err, files) => {
+  files.forEach(file => {
+    interpreter.loadFiles(['./aiml/'+file]);
+  });
+})
+
+
 
 let jawab = ''
 var callback = function(answer, wildCardArray, input){
