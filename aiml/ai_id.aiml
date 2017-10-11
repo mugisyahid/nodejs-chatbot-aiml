@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+
+
+
+<category>
+<pattern>WHO IS ISMA</pattern>
+<template><set name="she">Isma</set> is most beatiful woman in the world.</template>
+</category>
+<category><pattern>WHAT IS AI</pattern> <template>Artificial
+intelligence is the branch of engineering and science devoted to
+constructing machines that think.
+<think>
+<set name="it"><set name="topic">Artificial Intelligence</set> </set></think>
+</template>
+</category>
+
+
+</aiml>

@@ -16,6 +16,14 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+//core-js
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
 //AIML interpreter
 aimlHigh = require('aiml-high');
 var interpreter = new aimlHigh({name:'Isma', age:'18'}, 'Goodbye');
@@ -55,13 +63,19 @@ app.get('/', function(request, response) {
 });
 
 app.post('/', function(request, response){
+if(request.body.type == 'askBot'){
     jsonRequest = request.body
     jsonRequest.type = 'answerBot'
-    console.log(jawab)
     interpreter.findAnswer(request.body.param.question, callback);
-    console.log(jawab)
-    jsonRequest.param.answer = jawab
+    if(jawab){
+      jsonRequest.param.answer = jawab
+    }else{
+      jsonRequest.param.answer = request.body.param.answer 
+    }
     response.send(jsonRequest);
+  }else{
+    response.send('not ok');
+  }
 });
 
 
