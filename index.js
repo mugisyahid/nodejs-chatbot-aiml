@@ -34,11 +34,18 @@ fs.readdir('./aiml', (err, files) => {
   });
 })
 
-// fs.readdir('./aiml-mitsuku', (err, files) => {
-//   files.forEach(file => {
-//     interpreter.loadFiles(['./aiml-mitsuku/'+file]);
-//   });
-// })
+fs.readdir('./aiml-mitsuku', (err, files) => {
+  files.forEach(file => {
+    interpreter.loadFiles(['./aiml-mitsuku/'+file]);
+  });
+})
+
+
+fs.readdir('./aiml-alice', (err, files) => {
+  files.forEach(file => {
+    interpreter.loadFiles(['./aiml-alice/'+file]);
+  });
+})
 
 
 

@@ -4,6 +4,14 @@
     <pattern>SIAPA * KAMU</pattern>
     <template>Nama ku <bot name="name"/>.</template>
   </category>
+
+
+  <category>
+    <pattern>NAMA KAMU SIAPA</pattern>
+    <template><srai>SIAPA * KAMU</srai></template>
+  </category>
+
+
   <category>
     <pattern>NAMA SAYA * <set name="clientName">*</set></pattern>
     <template>
