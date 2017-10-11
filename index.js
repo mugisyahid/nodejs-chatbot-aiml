@@ -26,13 +26,19 @@ app.use(function(req, res, next) {
 
 //AIML interpreter
 aimlHigh = require('aiml-high');
-var interpreter = new aimlHigh({name:'Isma', age:'18'}, 'Goodbye');
+var interpreter = new aimlHigh({name:'Isma', age:'18', gender: 'Female'}, 'Goodbye');
 
 fs.readdir('./aiml', (err, files) => {
   files.forEach(file => {
     interpreter.loadFiles(['./aiml/'+file]);
   });
 })
+
+// fs.readdir('./aiml-mitsuku', (err, files) => {
+//   files.forEach(file => {
+//     interpreter.loadFiles(['./aiml-mitsuku/'+file]);
+//   });
+// })
 
 
 
@@ -70,7 +76,7 @@ if(request.body.type == 'askBot'){
     if(jawab){
       jsonRequest.param.answer = jawab
     }else{
-      jsonRequest.param.answer = request.body.param.answer 
+      jsonRequest.param.answer = request.body.param.answer
     }
     response.send(jsonRequest);
   }else{
