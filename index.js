@@ -77,19 +77,26 @@ app.get('/', function(request, response) {
 });
 
 app.post('/', function(request, response){
-if(request.body.type == 'askBot'){
-    jsonRequest = request.body
-    jsonRequest.type = 'answerBot'
-    interpreter.findAnswer(request.body.param.question, callback);
-    if(jawab){
-      jsonRequest.param.answer = jawab
-    }else{
-      jsonRequest.param.answer = request.body.param.answer
+
+try{
+    if(request.body.type == 'askBot'){
+        jsonRequest = request.body
+        jsonRequest.type = 'answerBot'
+        jsonRequest.param.answer = request.body.param.answer
+
+
+        interpreter.findAnswer(request.body.param.question, callback);
+        if(jawab){
+          jsonRequest.param.answer = jawab
+        }
+        response.send(jsonRequest);
+      }else{
+        response.send('not ok');
+      }
+    }catch(e){
+      console.log(e)
+      response.send(jsonRequest);
     }
-    response.send(jsonRequest);
-  }else{
-    response.send('not ok');
-  }
 });
 
 
