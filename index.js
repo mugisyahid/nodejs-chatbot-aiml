@@ -33,7 +33,7 @@ function initBrain(){
   var intprtr = new aimlHigh({name:'Isma', age:'18', gender: 'Female'}, 'Goodbye');
   fs.readdir('./aiml', (err, files) => {
     files.forEach(file => {
-      intprtr.loadFiles(['./aiml/'+file]);
+       intprtr.loadFiles(['./aiml/'+file]);
     });
   })
 
