@@ -43,6 +43,7 @@ fs.readdir('./aiml-mitsuku', (err, files) => {
 
 fs.readdir('./aiml-alice', (err, files) => {
   files.forEach(file => {
+    console.log(file)
     interpreter.loadFiles(['./aiml-alice/'+file]);
   });
 })
