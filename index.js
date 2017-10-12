@@ -26,27 +26,37 @@ app.use(function(req, res, next) {
 
 //AIML interpreter
 aimlHigh = require('aiml-high');
-var interpreter = new aimlHigh({name:'Isma', age:'18', gender: 'Female'}, 'Goodbye');
-
-fs.readdir('./aiml', (err, files) => {
-  files.forEach(file => {
-    interpreter.loadFiles(['./aiml/'+file]);
-  });
-})
-
-fs.readdir('./aiml-mitsuku', (err, files) => {
-  files.forEach(file => {
-    interpreter.loadFiles(['./aiml-mitsuku/'+file]);
-  });
-})
 
 
-fs.readdir('./aiml-alice', (err, files) => {
-  files.forEach(file => {
-    console.log(file)
-    interpreter.loadFiles(['./aiml-alice/'+file]);
-  });
-})
+
+function initBrain(){
+  var intprtr = new aimlHigh({name:'Isma', age:'18', gender: 'Female'}, 'Goodbye');
+  fs.readdir('./aiml', (err, files) => {
+    files.forEach(file => {
+      intprtr.loadFiles(['./aiml/'+file]);
+    });
+  })
+
+  fs.readdir('./aiml-mitsuku', (err, files) => {
+    files.forEach(file => {
+      intprtr.loadFiles(['./aiml-mitsuku/'+file]);
+    });
+  })
+
+
+  fs.readdir('./aiml-alice', (err, files) => {
+    files.forEach(file => {
+      console.log(file)
+      intprtr.loadFiles(['./aiml-alice/'+file]);
+    });
+  })
+
+  return intprtr;
+
+}
+
+
+var interpreter = initBrain();
 
 
 
@@ -93,8 +103,10 @@ try{
       }else{
         response.send('not ok');
       }
-    }catch(e){
+    }catch(e)
       console.log(e)
+      interpreter = initBrain();
+      jsonRequest.param.answer = 'Something went wrong. Restarting my Brain :)'
       response.send(jsonRequest);
     }
 });
