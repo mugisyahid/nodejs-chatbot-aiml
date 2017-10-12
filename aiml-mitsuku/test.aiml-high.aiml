@@ -169,8 +169,8 @@
     <pattern>I LIKE GIFS</pattern>
     <template>GIF this: <img src="GIF" /></template>
   </category>
-  <category>
+  <!-- <category>
     <pattern>*</pattern>
     <template>I found nothing.</template>
-  </category>
+  </category> -->
 </aiml>

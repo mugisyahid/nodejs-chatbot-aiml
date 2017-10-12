@@ -190,7 +190,7 @@
   </category>
 
 
-
+<!--
   <category>
     <pattern>*</pattern>
     <template>
@@ -200,5 +200,5 @@
       <li>Tanya lagi?</li>
       </random>
     </template>
-  </category>
+  </category> -->
 </aiml>
