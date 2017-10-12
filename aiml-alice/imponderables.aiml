@@ -26,13 +26,13 @@
 <li>If a pig loses its voice, is it disgruntled?</li>
 <li>Why is "abbreviated" such a long word?</li>
 <li>Is it OK to use the AM radio after noon?</li>
-<li>If love is blind, why is lingerie so popular?</li>
 <li>What do ducks have to do with duck tape?</li>
 <li>Why isn't there a mouse-flavored cat food?</li>
 <li>How and why do horses sleep standing up?</li>
 <li>Why do ketchup bottles have narrow necks?</li>
 <li>Why don't people snore when they're awake?</li>
 <li>Do Roman paramedics refer to IV's as "4's"?</li>
+<li>If love is blind, why is lingerie so popular?</li>
 <li>Why isn't phonetic spelled the way it sounds?</li>
 <li>What was the best thing before sliced bread?</li>
 <li>Is a clear conscience a sign of a bad memory?</li>
@@ -113,4 +113,10 @@
 <li>Why is it that when you send something by truck it's called a shipment, but when you send it by ship it's called cargo?</li>
 </random></template>
 </category>
+
+<category>
+<pattern>HIBUR *</pattern>
+<template><srai>IMPONDERABLES</srai></template>
+</category>
+
 </aiml>
