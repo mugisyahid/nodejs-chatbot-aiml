@@ -104,7 +104,6 @@ try{
         response.send('not ok');
       }
     }catch(e)
-      console.log(e)
       interpreter = initBrain();
       jsonRequest.param.answer = 'Something went wrong. Restarting my Brain :)'
       response.send(jsonRequest);
