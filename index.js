@@ -88,6 +88,9 @@ app.get('/', function(request, response) {
 
 app.post('/', function(request, response){
 
+
+
+
 try{
     if(request.body.type == 'askBot'){
         jsonRequest = request.body
@@ -103,7 +106,7 @@ try{
       }else{
         response.send('not ok');
       }
-    }catch(e)
+    }catch(e){
       interpreter = initBrain();
       jsonRequest.param.answer = 'Something went wrong. Restarting my Brain :)'
       response.send(jsonRequest);
