@@ -59,19 +59,6 @@
   </category>
 
   <category>
-    <pattern>TEST SR IN RANDOM</pattern>
-    <template>
-      <random>
-        <li>
-          <sr/>
-        </li>
-        <li>
-          <srai>WHAT IS YOUR NAME</srai>
-        </li>
-      </random>
-    </template>
-  </category>
-  <category>
     <pattern>TEST THE STAR TAG</pattern>
     <template>
       <star/>
@@ -143,16 +130,7 @@
     <pattern>WHAT DO YOU KNOW ABOUT ME</pattern>
     <template>Your name is <get name="clientName"/> and you are <get name="clientAge"/></template>
   </category>
-  <category>
-    <pattern>TEST CONDITION AND SRAI</pattern>
-    <template>
-      <condition name="state">
-        <li value="happy">Feeling happy! <srai>WHAT IS YOUR NAME</srai></li>
-        <li value="sad">Feeling sad today <srai>WHAT IS MY NAME</srai></li>
-        <li>I don't feel anything <srai>HOW OLD AM I</srai></li>
-      </condition>
-    </template>
-  </category>
+
   <category>
     <pattern>DO UPPERCASE <set name="clientName">*</set></pattern>
     <template>Hello <uppercase><get name="clientName" /></uppercase></template>
