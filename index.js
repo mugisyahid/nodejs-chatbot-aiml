@@ -37,19 +37,19 @@ function initBrain(){
     });
   })
 
-  fs.readdir('./aiml-mitsuku', (err, files) => {
-    files.forEach(file => {
-      intprtr.loadFiles(['./aiml-mitsuku/'+file]);
-    });
-  })
-
-
-  fs.readdir('./aiml-alice', (err, files) => {
-    files.forEach(file => {
-      console.log(file)
-      intprtr.loadFiles(['./aiml-alice/'+file]);
-    });
-  })
+  // fs.readdir('./aiml-mitsuku', (err, files) => {
+  //   files.forEach(file => {
+  //     intprtr.loadFiles(['./aiml-mitsuku/'+file]);
+  //   });
+  // })
+  //
+  //
+  // fs.readdir('./aiml-alice', (err, files) => {
+  //   files.forEach(file => {
+  //     console.log(file)
+  //     intprtr.loadFiles(['./aiml-alice/'+file]);
+  //   });
+  // })
 
   return intprtr;
 
@@ -107,7 +107,8 @@ try{
         response.send('not ok');
       }
     }catch(e){
-      interpreter = initBrain();
+      console.log(e)
+      // interpreter = initBrain(); bad things!
       jsonRequest.param.answer = 'Something went wrong. Restarting my Brain :)'
       response.send(jsonRequest);
     }
