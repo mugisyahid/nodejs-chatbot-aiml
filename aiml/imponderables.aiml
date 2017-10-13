@@ -9,7 +9,7 @@
 <!-- as adopted by the ALICE A.I. Foundation.  -->
 <!-- Last modified 10/5/2011 -->
 <!-- -->
-<category><pattern>HIBUR</pattern>
+<category><pattern>HIBUR *</pattern>
 <template><random><li>Do fish ever sneeze?</li>
 <li>Can sour cream go bad?</li>
 <li>What is the speed of dark?</li>
