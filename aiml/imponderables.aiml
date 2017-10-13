@@ -9,7 +9,7 @@
 <!-- as adopted by the ALICE A.I. Foundation.  -->
 <!-- Last modified 10/5/2011 -->
 <!-- -->
-<category><pattern>IMPONDERABLES</pattern>
+<category><pattern>HIBUR</pattern>
 <template><random><li>Do fish ever sneeze?</li>
 <li>Can sour cream go bad?</li>
 <li>What is the speed of dark?</li>
@@ -112,11 +112,6 @@
 <li>A bus station is where a bus stops; a train station is where a train stops. What occurs at a desk with a work station?</li>
 <li>Why is it that when you send something by truck it's called a shipment, but when you send it by ship it's called cargo?</li>
 </random></template>
-</category>
-
-<category>
-<pattern>HIBUR *</pattern>
-<template><srai>IMPONDERABLES</srai></template>
 </category>
 
 </aiml>
