@@ -51,33 +51,7 @@
     </template>
   </category>
 
-  <category>
-    <pattern>TEST SR TAG</pattern>
-    <template>
-      <sr/>
-    </template>
-  </category>
 
-  <category>
-    <pattern>TEST THE STAR TAG</pattern>
-    <template>
-      <star/>
-    </template>
-  </category>
-  <category>
-    <pattern>TEST THE THAT TAG</pattern>
-    <template>I start testing that.</template>
-  </category>
-  <category>
-    <pattern>TEST THAT-TAG. MATCH</pattern>
-    <that>I start testing that.</that>
-    <template>That matched quite well!</template>
-  </category>
-  <category>
-    <pattern>TEST THAT-TAG. DONT MATCH</pattern>
-    <that>I found something.</that>
-    <template>Sorry, that did not match!</template>
-  </category>
   <category>
     <pattern>KAMU MERASA <set name="state">*</set></pattern>
     <template>Yeah! Saya merasa <get name="state"/>!</template>
@@ -125,35 +99,6 @@
   <category>
     <pattern>Berapa * Saya</pattern>
     <template>Kamu <get name="clientAge"/> tahun.</template>
-  </category>
-  <category>
-    <pattern>WHAT DO YOU KNOW ABOUT ME</pattern>
-    <template>Your name is <get name="clientName"/> and you are <get name="clientAge"/></template>
-  </category>
-
-  <category>
-    <pattern>DO UPPERCASE <set name="clientName">*</set></pattern>
-    <template>Hello <uppercase><get name="clientName" /></uppercase></template>
-  </category>
-  <category>
-    <pattern>DO LOWERCASE <set name="clientName">*</set></pattern>
-    <template>Hello <lowercase><get name="clientName" /></lowercase></template>
-  </category>
-  <category>
-    <pattern>DO FORMAL CASE <set name="clientName">*</set></pattern>
-    <template>Hello <formal><get name="clientName" /></formal></template>
-  </category>
-  <category>
-    <pattern>DO SENTENCE <set name="clientName">*</set></pattern>
-    <template><sentence><get name="clientName" /></sentence> is the best.</template>
-  </category>
-  <category>
-    <pattern>SUPPORT BR TAGS</pattern>
-    <template>This<br/>is<br/>a<br/>bot.</template>
-  </category>
-  <category>
-    <pattern>I LIKE GIFS</pattern>
-    <template>GIF this: <img src="GIF" /></template>
   </category>
 
 
